@@ -5,12 +5,6 @@ export default defineConfig({
 
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || '',
   token: process.env.TINA_TOKEN || '',
-  search: {
-    tina: {
-      indexerToken: process.env.TINA_SEARCH_TOKEN || '',
-      stopwordLanguages: ['eng'],
-    },
-  },
 
   build: {
     outputFolder: 'admin',
