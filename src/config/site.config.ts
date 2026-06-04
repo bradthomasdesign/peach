@@ -159,13 +159,13 @@ const siteConfig: SiteConfig = {
       maxDepth: 3,
     },
     comments: {
-      enabled: false,
+      enabled: true,
       provider: 'giscus',
       giscus: {
-        repo: 'owner/repo',
-        repoId: '',
+        repo: 'bradthomasdesign/btd',
+        repoId: 'R_kgDOSxaUtw',
         category: 'General',
-        categoryId: '',
+        categoryId: 'DIC_kwDOSxaUt84C-hng',
         mapping: 'pathname',
         strict: false,
         reactionsEnabled: true,
