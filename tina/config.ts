@@ -3,8 +3,8 @@ import { defineConfig } from 'tinacms';
 export default defineConfig({
   branch: process.env.TINA_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || 'main',
 
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || '',
-  token: process.env.TINA_TOKEN || '',
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || '147e0382-9848-4dab-b290-6f4b63d67289',
+  token: process.env.TINA_TOKEN || 'b6d1107b9e7f38e7c136f022717bf6ee4feef2d6',
 
   build: {
     outputFolder: 'admin',
