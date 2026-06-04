@@ -27,7 +27,7 @@
   },
   "scripts": {
     "dev": "tinacms dev -c \"astro dev\"",
-    "build": "NODE_OPTIONS=--max-old-space-size=8192 tinacms build --skip-cloud-checks && astro build",
+    "build": "NODE_OPTIONS=--max-old-space-size=8192 tinacms build --skip-cloud-checks --skip-search-index && astro build",
     "preview": "astro preview",
     "check": "astro check",
     "lint": "eslint .",
