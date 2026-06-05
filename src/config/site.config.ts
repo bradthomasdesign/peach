@@ -120,29 +120,28 @@ export interface SiteConfig {
 }
 
 const siteConfig: SiteConfig = {
-  name: 'Astro Rocket',
+  name: 'Brad Thomas',
   description:
-    'Astro Rocket — A production-ready Astro 6 starter with 12 beautiful themes, 57+ components, built-in i18n, dark mode and a fast, modern foundation to build anything on.',
-  url: SITE_URL || 'https://astrorocket.dev',
+    'Information Architect & UX Principal with 20+ years of design experience. Visual storyteller translating complexity into clarity — from print and identity to web and digital experience design.',
+  url: SITE_URL || 'https://bradleyt.com',
   ogImage: '/og-default.svg',
-  author: 'Hans Martens',
-  email: 'hello@hansmartens.dev',
+  author: 'Brad Thomas',
+  email: 'brad@bradthomas.io',
+  phone: '704.738.3481',
   address: {
     street: '',
-    city: 'Amsterdam',
-    state: '',
+    city: 'Concord',
+    state: 'NC',
     zip: '',
-    country: 'the Netherlands',
+    country: 'USA',
   },
   socialLinks: [
-    'https://github.com/hansmartensdev',
-    'https://x.com/hansmartens_dev',
-    'https://www.linkedin.com',
-    'https://bsky.app/profile/hansmartensdev.bsky.social',
+    'https://linkedin.com/in/bradthomasnc',
+    'https://bradthomas.io',
   ],
   twitter: {
-    site: 'https://x.com/hansmartens_dev',
-    creator: '@hansmartens_dev',
+    site: '',
+    creator: '',
   },
   verification: {
     google: GOOGLE_SITE_VERIFICATION,
