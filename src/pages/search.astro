@@ -1,0 +1,64 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import Badge from '@/components/ui/data-display/Badge/Badge.astro';
+import { Hero } from '@/components/hero';
+import Icon from '@/components/ui/primitives/Icon/Icon.astro';
+---
+
+<PageLayout
+  title="Search — Brad Thomas"
+  description="Search articles on design, UX, AI, and the future of creative work."
+>
+  <Hero layout="centered" size="sm" class="isolate" showHeroHalo>
+    <Badge slot="badge" variant="brand" pill>
+      <Icon name="search" size="sm" />
+      Search
+    </Badge>
+    <h1 slot="title">Search the site</h1>
+    <p slot="description">Find articles on design, UX, AI, and creative work.</p>
+  </Hero>
+
+  <section class="py-[var(--space-section-md)] bg-background border-t border-border">
+    <div class="mx-auto max-w-3xl px-6">
+      <div id="search"></div>
+    </div>
+  </section>
+</PageLayout>
+
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+<script>
+  import { PagefindUI } from '@pagefind/default-ui';
+
+  window.addEventListener('DOMContentLoaded', () => {
+    new PagefindUI({
+      element: '#search',
+      showSubResults: true,
+      resetStyles: false,
+      showImages: true,
+    });
+  });
+</script>
+
+<style is:global>
+  .pagefind-ui {
+    --pagefind-ui-primary: var(--color-brand-500);
+    --pagefind-ui-text: var(--color-foreground);
+    --pagefind-ui-background: var(--color-background);
+    --pagefind-ui-border: var(--color-border);
+    --pagefind-ui-border-radius: 0.5rem;
+    --pagefind-ui-font: inherit;
+  }
+  .pagefind-ui__search-input {
+    background: var(--color-background-secondary) !important;
+    color: var(--color-foreground) !important;
+  }
+  .pagefind-ui__result {
+    border-color: var(--color-border) !important;
+  }
+  .pagefind-ui__result-title a {
+    color: var(--color-foreground) !important;
+  }
+  .pagefind-ui__result-excerpt {
+    color: var(--color-foreground-muted) !important;
+  }
+</style>

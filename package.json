@@ -27,7 +27,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist/client",
     "preview": "astro preview",
     "check": "astro check",
     "lint": "eslint .",
@@ -52,6 +52,7 @@
     "@iconify/react": "^6.0.2",
     "astro": "6.0.0",
     "astro-icon": "^1.1.5",
+    "astro-mastodon": "^0.3.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.563.0",
