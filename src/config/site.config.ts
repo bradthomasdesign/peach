@@ -130,8 +130,8 @@ const siteConfig: SiteConfig = {
   phone: '704.738.3481',
   address: {
     street: '',
-    city: 'Concord',
-    state: 'NC',
+    city: 'Staunton',
+    state: 'VA',
     zip: '',
     country: 'USA',
   },
