@@ -12,8 +12,8 @@ import { Hero } from '@/components/hero';
 import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
 ---
 <PageLayout
-  title="Services — Web Design, Development & Performance"
-  description="Three core services for modern websites: thoughtful design, clean Astro development, and measurable performance & SEO."
+  title="Services — Brad Thomas"
+  description="UX & information architecture, design systems, and AI-native interface design. 20+ years translating complexity into clarity."
 >
   <Hero layout="centered" size="sm" class="isolate services-hero" showHeroHalo>
     <Badge slot="badge" variant="brand" pill>
@@ -21,34 +21,33 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
       Services
     </Badge>
     <h1 slot="title">
-      <span class="text-foreground">What I offer —</span><br />
-      <span class="text-brand-500">designed, built, and tuned.</span>
+      <span class="text-foreground">What I do —</span><br />
+      <span class="text-brand-500">clarity by design.</span>
     </h1>
 
     <p slot="description">
-      Three core services, one consistent standard. From the first
-      wireframe to the final Lighthouse score, every project gets the
-      same attention to detail.
+      20+ years of translating complexity into clarity — from enterprise UX strategy
+      to AI-native interfaces and design systems built to scale.
     </p>
 
     <Fragment slot="actions">
-      <Button size="lg" href="#design" variant="outline">
-        Web Design
+      <Button size="lg" href="#ux" variant="outline">
+        UX & IA
         <Icon name="arrow-down" size="sm" class="hero-jump-arrow" />
       </Button>
-      <Button size="lg" href="#development" variant="outline">
-        Development
+      <Button size="lg" href="#design-systems" variant="outline">
+        Design Systems
         <Icon name="arrow-down" size="sm" class="hero-jump-arrow" />
       </Button>
-      <Button size="lg" href="#performance" variant="outline">
-        Performance
+      <Button size="lg" href="#ai-ux" variant="outline">
+        AI UX
         <Icon name="arrow-down" size="sm" class="hero-jump-arrow" />
       </Button>
     </Fragment>
   </Hero>
 
-  <!-- Design -->
-  <section id="design" class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
+  <!-- UX & IA -->
+  <section id="ux" class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
     <div class="mx-auto max-w-6xl px-6">
       <div class="grid gap-10 glitch:grid-cols-2 glitch:gap-12 glitch:items-start">
         <!-- Text -->
@@ -56,20 +55,20 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
           <div class="flex flex-col gap-6 sm:items-center glitch:items-start">
             <Badge variant="brand" pill class="self-start sm:self-center glitch:self-start">
               <Icon name="layout" size="sm" />
-              Web Design
+              UX & Information Architecture
             </Badge>
             <h2 class="font-display text-3xl md:text-4xl font-bold text-foreground">
-              Design with intention
+              Structure that serves users
             </h2>
           </div>
           <p class="text-lg text-foreground-muted leading-relaxed text-pretty sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0">
-            Great design starts with the people who'll use it. I design layouts shaped around your content and your audience, not around trends that age badly. Typography, spacing, and colour are chosen for clarity — not novelty.
+            Good UX starts before any pixels are placed. I work from user research and business goals to map information architecture, define user flows, and establish the structural foundation that makes everything downstream easier.
           </p>
           <p class="text-lg text-foreground-muted leading-relaxed text-pretty sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0">
-            Every screen is considered: desktop, tablet, and the phone someone holds at the bus stop. The brand stays consistent across the whole experience, and the small details are treated as part of the design, not the polish.
+            Whether it's a complex enterprise application or a consumer-facing product, the goal is the same: make the right path obvious and the wrong path hard to find.
           </p>
           <Button variant="outline" href="/contact" class="self-start sm:self-center glitch:self-start mt-2 sm:hidden glitch:inline-flex">
-            Discuss a design project
+            Discuss a UX project
             <Icon name="arrow-right" size="sm" />
           </Button>
         </div>
@@ -86,37 +85,37 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Bespoke layouts</span> — built for your content, not from a template. Every section earns its place by serving the page's goal.
+                  <span class="font-semibold text-foreground">Information architecture</span> — site maps, navigation models, and content hierarchy that make complex systems feel simple.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Responsive across breakpoints</span> — phone, tablet, desktop, ultrawide. Layouts reflow with intent, not just shrink to fit.
+                  <span class="font-semibold text-foreground">User flows & wireframes</span> — low and high fidelity, annotated for handoff. The design rationale travels with the file.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Typography systems</span> — readable, scaleable, on-brand. A clear hierarchy from page title down to caption, tuned for long-form reading.
+                  <span class="font-semibold text-foreground">Interactive prototypes</span> — clickable Figma prototypes for stakeholder alignment and usability testing before development begins.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Light & dark themes</span> — one design, two moods, user's choice. Both modes are checked at every step, not retrofitted at the end.
+                  <span class="font-semibold text-foreground">Mobile UX</span> — mobile-first thinking with platform conventions respected. iOS and Android patterns applied where they serve users best.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Considered motion</span> — interactions that guide, never distract. Reduced-motion preferences are respected without exception.
+                  <span class="font-semibold text-foreground">Accessibility</span> — ADA compliance, WCAG standards, and inclusive design principles applied throughout — not retrofitted at the end.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Accessibility baked in</span> — contrast, focus, semantic structure. Keyboard paths and screen-reader output are verified before launch.
+                  <span class="font-semibold text-foreground">Research & strategy</span> — stakeholder interviews, user research synthesis, and experience strategy to ground design decisions in evidence.
                 </p>
               </li>
             </ul>
@@ -132,26 +131,26 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
     </div>
   </section>
 
-  <!-- Development -->
-  <section id="development" class="py-[var(--space-section-md)] bg-background border-t border-border">
+  <!-- Design Systems -->
+  <section id="design-systems" class="py-[var(--space-section-md)] bg-background border-t border-border">
     <div class="mx-auto max-w-6xl px-6">
       <div class="grid gap-10 glitch:grid-cols-2 glitch:gap-12 glitch:items-start">
         <!-- Text -->
         <div class="flex flex-col gap-4 sm:items-center sm:text-center glitch:order-2 glitch:items-start glitch:text-left" data-reveal="left" data-reveal-ease="smooth">
           <div class="flex flex-col gap-6 sm:items-center glitch:items-start">
             <Badge variant="brand" pill class="self-start sm:self-center glitch:self-start">
-              <Icon name="code" size="sm" />
-              Web Development
+              <Icon name="layers" size="sm" />
+              Design Systems
             </Badge>
             <h2 class="font-display text-3xl md:text-4xl font-bold text-foreground">
-              Code that earns its place
+              Systems that scale with you
             </h2>
           </div>
           <p class="text-lg text-foreground-muted leading-relaxed text-pretty sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0">
-            I build with Astro because it ships what's needed and nothing else. The result is sites that score well in audits, feel fast in the hand, and don't grow brittle over time.
+            A design system is the connective tissue between design and engineering. I build Figma-based component libraries and visual standards that reduce decision fatigue, accelerate delivery, and keep products consistent as they grow.
           </p>
           <p class="text-lg text-foreground-muted leading-relaxed text-pretty sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0">
-            Architecture matters as much as output: typed content, predictable component boundaries, and a build pipeline a future developer (or future you) can pick up without a guided tour.
+            At EPRI I've built and maintained an enterprise-wide UI library used across multiple product teams. The goal is always the same: a system that teams actually use because it makes their work easier.
           </p>
           <Button variant="outline" href="/projects" class="self-start sm:self-center glitch:self-start mt-2 sm:hidden glitch:inline-flex">
             See recent projects
@@ -171,37 +170,37 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Astro + Tailwind</span> — modern stack, minimal JavaScript, clean HTML. The browser renders the page almost instantly, with no hydration tax.
+                  <span class="font-semibold text-foreground">Figma component libraries</span> — enterprise-ready, auto-layout, tokenized. Built for multi-team use with clear naming conventions and documentation.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Typed content collections</span> — structured blog, projects, and data. Schema validation runs at build time, so broken content never ships.
+                  <span class="font-semibold text-foreground">Design tokens</span> — color, typography, spacing, and motion defined once and applied everywhere. Theming becomes a configuration, not a rewrite.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Forms & integrations</span> — protected, GDPR-aware, hooked into your tools. Submissions reach your inbox or CRM without leaking client-side.
+                  <span class="font-semibold text-foreground">Visual web standards</span> — guidelines that keep products consistent across teams, products, and time — even as the system grows.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Hosting & deploy</span> — Netlify, Vercel, Cloudflare, or your own infra. Preview deploys for every branch, so changes can be reviewed before they go live.
+                  <span class="font-semibold text-foreground">Style tiles & brand translation</span> — translating brand guidelines into a practical digital design language teams can actually ship with.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Version control & CI</span> — git-based workflow, repeatable deploys. Automated checks gate every pull request before merge.
+                  <span class="font-semibold text-foreground">Dev handoff</span> — specs, redlines, and Figma annotations that give engineering exactly what they need without a 30-minute walkthrough.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Handover documentation</span> — code, keys, and a README you can actually read. Written so a future developer (or future you) can pick the project up without a tour.
+                  <span class="font-semibold text-foreground">Adoption & governance</span> — documentation, onboarding, and the process changes that make a design system stick across the organization.
                 </p>
               </li>
             </ul>
@@ -217,29 +216,29 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
     </div>
   </section>
 
-  <!-- Performance -->
-  <section id="performance" class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
+  <!-- AI UX -->
+  <section id="ai-ux" class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
     <div class="mx-auto max-w-6xl px-6">
       <div class="grid gap-10 glitch:grid-cols-2 glitch:gap-12 glitch:items-start">
         <!-- Text -->
         <div class="flex flex-col gap-4 sm:items-center sm:text-center glitch:items-start glitch:text-left" data-reveal="right" data-reveal-ease="smooth">
           <div class="flex flex-col gap-6 sm:items-center glitch:items-start">
             <Badge variant="brand" pill class="self-start sm:self-center glitch:self-start">
-              <Icon name="zap" size="sm" />
-              Performance
+              <Icon name="brain" size="sm" />
+              AI-Native UX
             </Badge>
             <h2 class="font-display text-3xl md:text-4xl font-bold text-foreground">
-              Fast pages, found pages
+              Designing for the AI era
             </h2>
           </div>
           <p class="text-lg text-foreground-muted leading-relaxed text-pretty sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0">
-            Speed and search visibility aren't features to add at the end — they're constraints to honour from the first commit. Every second a page loads costs attention, ranking, and trust.
+            AI isn't just a feature to add to existing interfaces — it's reshaping how products work entirely. I design experiences where human creativity and AI capability work together, moving users from "finding" to "getting answers."
           </p>
           <p class="text-lg text-foreground-muted leading-relaxed text-pretty sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0">
-            I work to measurable targets, not vibes. Core Web Vitals, technical SEO, and accessibility are tracked, tuned, and verified before launch — and the dashboards stay yours after handover.
+            At EPRI, I've led the UX design of AI products that transform how researchers access information — reimagining the experience from the ground up rather than wrapping a chatbot in an old UI.
           </p>
           <Button variant="outline" href="/contact" class="self-start sm:self-center glitch:self-start mt-2 sm:hidden glitch:inline-flex">
-            Start a project
+            Start a conversation
             <Icon name="arrow-right" size="sm" />
           </Button>
         </div>
@@ -256,37 +255,37 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Core Web Vitals</span> — LCP, INP, and CLS held to Google's thresholds. Measured on real devices, not just synthetic tests.
+                  <span class="font-semibold text-foreground">AI product UX</span> — designing interfaces for LLM-powered products, answer engines, and generative AI tools that users actually trust.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Image pipeline</span> — modern formats, responsive sizes, lazy loading. Hero images art-directed so they look right on every screen.
+                  <span class="font-semibold text-foreground">AI-native process design</span> — redesigning UX workflows to work with AI as a collaborator, not just a feature bolted onto existing patterns.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Technical SEO</span> — metadata, sitemaps, structured data, OG images. All wired up and validated before the first crawl.
+                  <span class="font-semibold text-foreground">Research reimagined</span> — moving organizations from document-centric search to conversation-driven information delivery. Seen firsthand at EPRI.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Accessibility</span> — WCAG-aware markup and verified focus order. Tested with a screen reader and the keyboard alone, not just a contrast checker.
+                  <span class="font-semibold text-foreground">Human-AI interaction patterns</span> — trust, transparency, control, and error recovery. The interaction design details that make AI products feel reliable rather than opaque.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Lighthouse audits</span> — measurable scores delivered with the site. Repeatable in CI so they don't quietly drift after launch.
+                  <span class="font-semibold text-foreground">Team readiness</span> — helping design teams understand where AI amplifies their work and where human judgment remains irreplaceable.
                 </p>
               </li>
               <li class="flex items-start gap-3">
                 <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
                 <p class="text-sm text-foreground-muted leading-relaxed">
-                  <span class="font-semibold text-foreground">Privacy-friendly analytics</span> — useful data, no cookie banner. Self-hosted or vendor-anonymised, never sold on.
+                  <span class="font-semibold text-foreground">Writing & strategy</span> — frameworks, articles, and workshops on AI-native design for teams navigating the transition. Author of <em>Future Work</em>.
                 </p>
               </li>
             </ul>
