@@ -1,6 +1,6 @@
 import { config, collection, fields } from '@keystatic/core';
 
-const isLocal = process.env.KEYSTATIC_STORAGE_KIND !== 'github';
+const isLocal = import.meta.env.KEYSTATIC_STORAGE_KIND !== 'github';
 
 export default config({
   storage: isLocal

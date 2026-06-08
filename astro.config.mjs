@@ -52,6 +52,10 @@ export default defineConfig({
       PUBLIC_GOOGLE_MAPS_API_KEY: envField.string({ context: 'client', access: 'public', optional: true, default: '' }),
       PUBLIC_CONSENT_ENABLED: envField.boolean({ context: 'client', access: 'public', optional: true, default: false }),
       PUBLIC_PRIVACY_POLICY_URL: envField.string({ context: 'client', access: 'public', optional: true, default: '' }),
+      KEYSTATIC_STORAGE_KIND: envField.string({ context: 'server', access: 'public', optional: true, default: 'local' }),
+      KEYSTATIC_GITHUB_CLIENT_ID: envField.string({ context: 'server', access: 'secret', optional: true }),
+      KEYSTATIC_GITHUB_CLIENT_SECRET: envField.string({ context: 'server', access: 'secret', optional: true }),
+      KEYSTATIC_SECRET: envField.string({ context: 'server', access: 'secret', optional: true }),
     },
   },
 
