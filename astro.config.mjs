@@ -42,6 +42,7 @@ export default defineConfig({
   env: {
     schema: {
       SITE_URL: envField.string({ context: 'server', access: 'public', optional: true }),
+      PUBLIC_KEYSTATIC_GITHUB_APP_SLUG: envField.string({ context: 'client', access: 'public', optional: true }),
       PUBLIC_GA_MEASUREMENT_ID: envField.string({ context: 'client', access: 'public', optional: true }),
       PUBLIC_GTM_ID: envField.string({ context: 'client', access: 'public', optional: true }),
       RESEND_API_KEY: envField.string({ context: 'server', access: 'secret', optional: true }),
