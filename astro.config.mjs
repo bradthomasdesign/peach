@@ -6,6 +6,7 @@ import icon from 'astro-icon';
 import tailwindcss from '@tailwindcss/vite';
 import vercel from '@astrojs/vercel';
 import netlify from '@astrojs/netlify';
+import keystatic from '@keystatic/astro';
 import i18nConfig from './src/config/i18n.config.ts';
 
 const isNetlify = process.env.DEPLOY_TARGET === 'netlify';
@@ -63,6 +64,7 @@ export default defineConfig({
     mdx(),
     sitemap(),
     icon(),
+    keystatic(),
   ],
 
   vite: {
