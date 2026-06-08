@@ -1,14 +1,10 @@
 import { config, collection, fields } from '@keystatic/core';
 
-const isLocal = import.meta.env.KEYSTATIC_STORAGE_KIND !== 'github';
-
 export default config({
-  storage: isLocal
-    ? { kind: 'local' }
-    : {
-        kind: 'github',
-        repo: { owner: 'bradthomasdesign', name: 'btd' },
-      },
+  storage: {
+    kind: 'github',
+    repo: { owner: 'bradthomasdesign', name: 'btd' },
+  },
 
   ui: {
     brand: { name: 'Brad Thomas — CMS' },
