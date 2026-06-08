@@ -7,7 +7,7 @@ export default config({
     ? { kind: 'local' }
     : {
         kind: 'github',
-        repo: 'bradthomasdesign/btd',
+        repo: { owner: 'bradthomasdesign', name: 'btd' },
       },
 
   ui: {
