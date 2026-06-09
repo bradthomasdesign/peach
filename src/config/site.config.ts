@@ -170,7 +170,7 @@ const siteConfig: SiteConfig = {
         reactionsEnabled: true,
         emitMetadata: false,
         inputPosition: 'bottom',
-        theme: 'preferred_color_scheme',
+        theme: 'dark',
         lang: 'en',
       },
     },

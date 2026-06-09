@@ -47,18 +47,42 @@ import Icon from '@/components/ui/primitives/Icon/Icon.astro';
     --pagefind-ui-border: var(--color-border);
     --pagefind-ui-border-radius: 0.5rem;
     --pagefind-ui-font: inherit;
+    --pagefind-ui-placeholder-color: var(--color-foreground-muted);
   }
   .pagefind-ui__search-input {
     background: var(--color-background-secondary) !important;
     color: var(--color-foreground) !important;
+    border-color: var(--color-border) !important;
+  }
+  .pagefind-ui__search-input::placeholder {
+    color: var(--color-foreground-muted) !important;
+    opacity: 1 !important;
+  }
+  .pagefind-ui__search-clear {
+    color: var(--color-foreground-muted) !important;
   }
   .pagefind-ui__result {
     border-color: var(--color-border) !important;
+    background: var(--color-background-secondary) !important;
+    border-radius: 0.5rem !important;
+    padding: 1rem !important;
   }
   .pagefind-ui__result-title a {
     color: var(--color-foreground) !important;
   }
+  .pagefind-ui__result-title a:hover {
+    color: var(--color-brand-500) !important;
+  }
   .pagefind-ui__result-excerpt {
     color: var(--color-foreground-muted) !important;
+  }
+  .pagefind-ui__message {
+    color: var(--color-foreground-muted) !important;
+  }
+  mark {
+    background: var(--color-brand-500) !important;
+    color: var(--color-background) !important;
+    border-radius: 2px;
+    padding: 0 2px;
   }
 </style>
