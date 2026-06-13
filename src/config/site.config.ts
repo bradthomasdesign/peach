@@ -120,14 +120,13 @@ export interface SiteConfig {
 }
 
 const siteConfig: SiteConfig = {
-  name: 'Brad Thomas',
+  name: 'Peculiar Peach',
   description:
-    'Information Architect & UX Principal with 20+ years of design experience. Visual storyteller translating complexity into clarity — from print and identity to web and digital experience design.',
-  url: SITE_URL || 'https://bradleyt.com',
+    'Peculiar Peach — based in Staunton, Virginia.',
+  url: SITE_URL || 'https://www.peculiarpeach.com',
   ogImage: '/og-default.svg',
-  author: 'Brad Thomas',
-  email: 'brad@bradthomas.io',
-  phone: '704.738.3481',
+  author: 'Peculiar Peach',
+  email: 'hello@peculiarpeach.com',
   address: {
     street: '',
     city: 'Staunton',
@@ -135,10 +134,7 @@ const siteConfig: SiteConfig = {
     zip: '',
     country: 'USA',
   },
-  socialLinks: [
-    'https://linkedin.com/in/bradthomasnc',
-    'https://bradthomas.io',
-  ],
+  socialLinks: [],
   twitter: {
     site: '',
     creator: '',
@@ -161,10 +157,10 @@ const siteConfig: SiteConfig = {
       enabled: true,
       provider: 'giscus',
       giscus: {
-        repo: 'bradthomasdesign/btd',
-        repoId: 'R_kgDOSxaUtw',
+        repo: 'bradthomasdesign/peach',
+        repoId: 'R_kgDOS5m_kw',
         category: 'General',
-        categoryId: 'DIC_kwDOSxaUt84C-hng',
+        categoryId: 'DIC_kwDOS5m_k84C_FEI',
         mapping: 'pathname',
         strict: false,
         reactionsEnabled: true,
@@ -178,7 +174,7 @@ const siteConfig: SiteConfig = {
   i18n: i18nConfig,
   branding: {
     logo: {
-      alt: 'Brad Thomas',
+      alt: 'Peculiar Peach',
       imageUrl: '/favicon.svg',
     },
     favicon: {
