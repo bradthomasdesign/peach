@@ -3,11 +3,11 @@ import { config, collection, fields } from '@keystatic/core';
 export default config({
   storage: {
     kind: 'github',
-    repo: { owner: 'bradthomasdesign', name: 'btd' },
+    repo: { owner: 'bradthomasdesign', name: 'peach' },
   },
 
   ui: {
-    brand: { name: 'Brad Thomas — CMS' },
+    brand: { name: 'Peculiar Peach — CMS' },
   },
 
   collections: {
