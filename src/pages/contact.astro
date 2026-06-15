@@ -26,22 +26,100 @@ import siteConfig from '@/config/site.config';
     </p>
   </Hero>
 
-  <!-- Crisis banner -->
-  <section class="py-6 bg-background border-t border-border">
-    <div class="mx-auto max-w-3xl px-6">
-      <Card padding="lg" class="bg-brand-500/5 border-brand-500/20">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <div class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500">
-            <Icon name="heart" size="sm" />
-          </div>
-          <div class="flex-1">
-            <p class="font-semibold text-foreground text-sm">Struggling right now?</p>
-            <p class="text-sm text-foreground-muted mt-0.5">
-              This form isn't monitored for crises. If you need immediate support, please call or text <strong class="text-foreground">988</strong>, text <strong class="text-foreground">HOME to 741741</strong>, or visit our <a href="/resources#crisis" class="text-brand-500 hover:text-brand-600 font-medium underline underline-offset-2">crisis resources page</a>.
+  <!-- Crisis Resources -->
+  <section class="py-[var(--space-section-md)] bg-background border-t border-border">
+    <div class="mx-auto max-w-6xl px-6 flex flex-col gap-8">
+      <div class="flex flex-col gap-4" data-reveal>
+        <Badge variant="brand" pill class="self-start">
+          <Icon name="heart" size="sm" />
+          Crisis Resources
+        </Badge>
+        <h2 class="font-display text-3xl font-bold text-foreground">
+          If you're struggling right now
+        </h2>
+        <p class="text-lg text-foreground-muted max-w-2xl text-pretty">
+          Neurodivergent people experience mental health crises at higher rates. If you're in a hard moment, please reach out. These are real people, not bots.
+        </p>
+        <p class="text-sm text-foreground-muted">
+          This contact form isn't monitored for crises — please use the resources below if you need immediate support.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        <Card variant="elevated" padding="lg" data-reveal>
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+                <Icon name="phone" size="sm" />
+              </div>
+              <h3 class="font-semibold text-foreground">988 Suicide & Crisis Lifeline</h3>
+            </div>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Call or text <strong class="text-foreground">988</strong> from anywhere in the US. Available 24/7. You don't have to be suicidal to call — if you're in crisis, that's enough.
             </p>
+            <div class="flex flex-wrap gap-2 mt-1">
+              <a href="tel:988" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600">
+                Call 988 <Icon name="phone" size="sm" />
+              </a>
+              <span class="text-foreground-muted">·</span>
+              <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600">
+                Chat online <Icon name="arrow-up-right" size="sm" />
+              </a>
+            </div>
           </div>
-        </div>
-      </Card>
+        </Card>
+
+        <Card variant="elevated" padding="lg" data-reveal data-reveal-delay="1">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+                <Icon name="message-circle" size="sm" />
+              </div>
+              <h3 class="font-semibold text-foreground">Crisis Text Line</h3>
+            </div>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Text <strong class="text-foreground">HOME to 741741</strong>. Free, confidential, 24/7. Great if calling feels too hard or overwhelming — texting is a completely valid option.
+            </p>
+            <a href="https://crisistextline.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Crisis Text Line <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card variant="elevated" padding="lg" data-reveal data-reveal-delay="2">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+                <Icon name="users" size="sm" />
+              </div>
+              <h3 class="font-semibold text-foreground">NAMI Helpline</h3>
+            </div>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              The National Alliance on Mental Illness helpline: <strong class="text-foreground">1-800-950-6264</strong>. Monday–Friday, 10am–10pm ET. Also has a text option (text NAMI to 741741).
+            </p>
+            <a href="https://nami.org/help" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              NAMI Helpline <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card variant="elevated" padding="lg" data-reveal data-reveal-delay="3">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+                <Icon name="globe" size="sm" />
+              </div>
+              <h3 class="font-semibold text-foreground">International Association for Suicide Prevention</h3>
+            </div>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Outside the US? IASP maintains a directory of crisis centers around the world. Find the resource that's right for your country.
+            </p>
+            <a href="https://www.iasp.info/resources/Crisis_Centres/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Find a crisis center <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+      </div>
     </div>
   </section>
 
