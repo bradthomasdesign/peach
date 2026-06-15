@@ -1,8 +1,4 @@
 ---
-/**
- * Contact page
- * URL: /contact
- */
 import PageLayout from '@/layouts/PageLayout.astro';
 import Icon from '@/components/ui/primitives/Icon/Icon.astro';
 import Badge from '@/components/ui/data-display/Badge/Badge.astro';
@@ -10,49 +6,44 @@ import Card from '@/components/ui/data-display/Card/Card.astro';
 import { Hero } from '@/components/hero';
 import ContactForm from '@/components/patterns/ContactForm.astro';
 import siteConfig from '@/config/site.config';
-import { resolveSocialLinks } from '@/lib/utils';
-
-const socialLinks = resolveSocialLinks(siteConfig.socialLinks);
-
-const channels = [
-  {
-    icon: 'mail',
-    label: 'Email',
-    value: siteConfig.email,
-    note: 'Drop us a line',
-    href: `mailto:${siteConfig.email}`,
-    external: false,
-  },
-  ...socialLinks.map((link) => ({
-    icon: link.icon,
-    label: link.label,
-    value: link.href.replace(/^https?:\/\/(www\.)?/, ''),
-    note: 'Follow along',
-    href: link.href,
-    external: true,
-  })),
-];
 ---
 
 <PageLayout
-  title="Contact — Brad Thomas"
-  description="Have a project or question? Send me a note and I'll get back to you within one business day."
+  title="Contact — Peculiar Peach"
+  description="Get in touch with Peculiar Peach — suggestions, resource ideas, or just to say hi."
   eagerReveal
 >
   <Hero layout="centered" size="sm" class="isolate" showHeroHalo>
     <Badge slot="badge" variant="brand" pill>
       <Icon name="mail" size="sm" />
-      Start a project
+      Get in touch
     </Badge>
-
     <h1 slot="title">
-      Tell me about your <span class="text-brand-500">new project</span>
+      Say <span class="text-brand-400">something</span>
     </h1>
-
     <p slot="description">
-      I design and build websites. Share a few details below and I'll get back to you within 1 business day.
+      Suggestions, resource ideas, glossary additions, design requests, or just want to say hi — we read everything and reply when our brains cooperate.
     </p>
   </Hero>
+
+  <!-- Crisis banner -->
+  <section class="py-6 bg-background border-t border-border">
+    <div class="mx-auto max-w-3xl px-6">
+      <Card padding="lg" class="bg-brand-500/5 border-brand-500/20">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500">
+            <Icon name="heart" size="sm" />
+          </div>
+          <div class="flex-1">
+            <p class="font-semibold text-foreground text-sm">Struggling right now?</p>
+            <p class="text-sm text-foreground-muted mt-0.5">
+              This form isn't monitored for crises. If you need immediate support, please call or text <strong class="text-foreground">988</strong>, text <strong class="text-foreground">HOME to 741741</strong>, or visit our <a href="/resources#crisis" class="text-brand-500 hover:text-brand-600 font-medium underline underline-offset-2">crisis resources page</a>.
+            </p>
+          </div>
+        </div>
+      </Card>
+    </div>
+  </section>
 
   <!-- Contact Section -->
   <section class="relative isolate overflow-hidden py-[var(--space-section-md)] bg-background-secondary border-t border-border">
@@ -62,7 +53,8 @@ const channels = [
         <!-- Left column: contact form -->
         <div class="glitch:col-span-3 h-full sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0" data-reveal="right" data-reveal-ease="smooth">
           <Card padding="lg" class="h-full flex flex-col justify-center">
-            <h2 class="font-display text-xl font-bold text-foreground mb-6 sm:text-center glitch:text-left">Project details</h2>
+            <h2 class="font-display text-xl font-bold text-foreground mb-2 sm:text-center glitch:text-left">Send us a note</h2>
+            <p class="text-sm text-foreground-muted mb-6 sm:text-center glitch:text-left">We'll get back to you when we can — usually within a few days.</p>
             <ContactForm />
           </Card>
         </div>
@@ -70,49 +62,64 @@ const channels = [
         <!-- Right column: contact channels -->
         <div class="glitch:col-span-2 space-y-4 sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0" data-reveal="left" data-reveal-delay="1" data-reveal-ease="smooth">
           <div class="sm:text-center glitch:text-left">
-            <h2 class="font-display text-lg font-bold text-foreground mb-1">Other channels</h2>
-            <p class="text-sm text-foreground-muted">Prefer a direct channel? Pick whichever works best.</p>
+            <h2 class="font-display text-lg font-bold text-foreground mb-1">Other ways to reach us</h2>
+            <p class="text-sm text-foreground-muted">Pick whichever works for your brain.</p>
           </div>
 
-          <!-- Channel list -->
-          <div class="space-y-2">
-            {channels.map((ch) => (
-              <a
-                href={ch.href}
-                {...ch.external ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
-                class="block group"
-              >
-                <Card hover padding="sm" class="h-full">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500">
-                      <Icon name={ch.icon} size="sm" />
-                    </div>
-                    <div class="min-w-0 flex-1">
-                      <p class="font-semibold text-sm text-foreground">{ch.label}</p>
-                      <p class="text-xs text-foreground-muted truncate">{ch.value}</p>
-                    </div>
-                    <Icon name="arrow-up-right" size="sm" class="text-foreground-muted group-hover:text-brand-500 transition-colors shrink-0" />
-                  </div>
-                </Card>
-              </a>
-            ))}
-          </div>
+          <!-- Email -->
+          <a href={`mailto:${siteConfig.email}`} class="block group">
+            <Card hover padding="sm" class="h-full">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500">
+                  <Icon name="mail" size="sm" />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="font-semibold text-sm text-foreground">Email</p>
+                  <p class="text-xs text-foreground-muted truncate">{siteConfig.email}</p>
+                </div>
+                <Icon name="arrow-up-right" size="sm" class="text-foreground-muted group-hover:text-brand-500 transition-colors shrink-0" />
+              </div>
+            </Card>
+          </a>
 
-          <!-- Location card -->
-          <Card hover padding="sm" class="bg-brand-500/5 border-brand-500/20">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500">
-                <Icon name="map-pin" size="sm" />
+          <!-- Substack -->
+          <a href="https://peculiarpeach.substack.com" target="_blank" rel="noopener noreferrer" class="block group">
+            <Card hover padding="sm" class="h-full">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500">
+                  <Icon name="pen-line" size="sm" />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="font-semibold text-sm text-foreground">Newsletter</p>
+                  <p class="text-xs text-foreground-muted truncate">peculiarpeach.substack.com</p>
+                </div>
+                <Icon name="arrow-up-right" size="sm" class="text-foreground-muted group-hover:text-brand-500 transition-colors shrink-0" />
               </div>
-              <div>
-                <p class="font-semibold text-sm text-foreground">{siteConfig.address?.city ?? 'Your City'}</p>
-                <p class="text-xs text-foreground-muted mt-0.5">Based in {siteConfig.address?.country ?? 'Your Country'}</p>
-              </div>
+            </Card>
+          </a>
+
+          <!-- What we're looking for -->
+          <Card padding="sm" class="bg-brand-500/5 border-brand-500/20">
+            <div class="flex flex-col gap-2 px-1">
+              <p class="font-semibold text-sm text-foreground">What we love hearing about</p>
+              <ul class="flex flex-col gap-1.5">
+                {[
+                  'Resources we should add',
+                  'Glossary terms to define or correct',
+                  'Article ideas or submissions',
+                  'Merch design suggestions',
+                  'General feedback',
+                ].map((item) => (
+                  <li class="flex items-center gap-2 text-xs text-foreground-muted">
+                    <Icon name="check" size="sm" class="text-brand-500 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </Card>
 
         </div>
-
       </div>
     </div>
   </section>
