@@ -1,0 +1,168 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import Icon from '@/components/ui/primitives/Icon/Icon.astro';
+import Badge from '@/components/ui/data-display/Badge/Badge.astro';
+import Card from '@/components/ui/data-display/Card/Card.astro';
+import { Hero } from '@/components/hero';
+
+const terms = [
+  {
+    term: 'ADHD / ADD',
+    anchor: 'adhd',
+    definition: `Attention Deficit Hyperactivity Disorder (ADHD) — also called ADD when hyperactivity isn't a major feature — is a neurodevelopmental condition affecting attention, impulse control, and executive function. Despite the name, it's less about having no attention and more about having unreliable attention: hyperfocusing on interesting things and struggling to sustain focus on things that aren't. There are three presentations: inattentive (mostly attention/focus struggles), hyperactive-impulsive (mostly hyperactivity and impulsivity), and combined. Many people are diagnosed later in life, especially women and girls, who are often missed because their presentation looks different.`,
+  },
+  {
+    term: 'Autism / ASD',
+    anchor: 'autism',
+    definition: `Autism Spectrum Disorder (ASD) is a neurodevelopmental condition characterized by differences in social communication, sensory processing, and patterns of behavior or interests. "Spectrum" doesn't mean a linear scale from "a little autistic" to "very autistic" — it means autism presents differently in every person. Autistic people often experience sensory sensitivities (to sound, light, texture, etc.), strong preferences for routine, deep interests in specific subjects, and differences in how they communicate. Many autistic people use identity-first language ("autistic person" rather than "person with autism") — but preferences vary, so follow the individual's lead.`,
+  },
+  {
+    term: 'AuDHD',
+    anchor: 'audhd',
+    definition: `The informal term for someone who is both autistic and has ADHD. This combination is more common than many people realize — research suggests a significant overlap between the two conditions. AuDHD can be particularly tricky because autism and ADHD sometimes pull in opposite directions: autism often drives a need for routine and predictability, while ADHD drives impulsivity and novelty-seeking. The result can feel like your brain is fighting itself. Many AuDHD people are diagnosed with one condition first and don't discover the other until much later.`,
+  },
+  {
+    term: 'Dyslexia',
+    anchor: 'dyslexia',
+    definition: `A learning difference that affects reading, spelling, and written language processing. Dyslexia is not related to intelligence — dyslexic people often have strong verbal reasoning, creativity, and big-picture thinking. It affects how the brain processes written symbols, not the ability to understand or think about language. Many dyslexic people find strategies like text-to-speech, audiobooks, and colored overlays helpful. Dyslexia frequently co-occurs with ADHD and other neurodevelopmental differences.`,
+  },
+  {
+    term: 'Dyscalculia',
+    anchor: 'dyscalculia',
+    definition: `A learning difference affecting number sense, math skills, and the ability to understand and work with numbers. Often called "math dyslexia," though the underlying mechanisms are different. People with dyscalculia may struggle with telling time, estimating quantities, remembering math facts, and understanding concepts like distance or money — even when they're highly intelligent in other areas. Less well-known than dyslexia but equally real and equally not a reflection of intelligence.`,
+  },
+  {
+    term: 'Dyspraxia / DCD',
+    anchor: 'dyspraxia',
+    definition: `Developmental Coordination Disorder (DCD), also called dyspraxia, affects motor coordination and planning. It can impact everything from handwriting and sports to organizing tasks and navigating physical space. Often comes with difficulties in sequencing tasks, managing time, and organizing thoughts — making it a frequent co-traveler with ADHD and autism. It's not a muscle problem or a strength problem; it's a brain-body communication difference.`,
+  },
+  {
+    term: 'Executive Dysfunction',
+    anchor: 'executive-dysfunction',
+    definition: `The umbrella term for difficulties with the "executive functions" — the set of mental skills that help you plan, start tasks, manage time, remember instructions, regulate emotions, and shift between activities. Executive dysfunction is a core feature of ADHD and is common in autism, dyspraxia, and traumatic brain injury, among others. It's why you can want to do something and genuinely not be able to start it — not laziness, not lack of caring. The circuits that translate intention into action work differently.`,
+  },
+  {
+    term: 'Hyperfocus',
+    anchor: 'hyperfocus',
+    definition: `A state of intense, sustained concentration on a single task or topic — often to the exclusion of everything else, including basic needs like eating or sleeping. Hyperfocus is associated with ADHD and autism, and it's often misunderstood as evidence that "you can focus when you want to." The catch: hyperfocus is largely involuntary. It tends to kick in around things that are inherently interesting or novel, and it's very hard to redirect. It can be a superpower (extraordinary output on interesting projects) and a liability (losing hours to a Wikipedia spiral when you had other things to do).`,
+  },
+  {
+    term: 'Masking',
+    anchor: 'masking',
+    definition: `The act of suppressing or hiding neurodivergent traits — stimming, social differences, emotional reactions, sensory responses — in order to "pass" as neurotypical in social or professional settings. Masking is extremely common, especially in autistic and ADHD women and girls. It's often unconscious and learned from years of negative feedback about natural behaviors. While masking can help people navigate neurotypical spaces, it comes at a significant cost: it's exhausting, associated with anxiety and depression, and can lead to autistic burnout. Unmasking — gradually allowing more authentic expression — is an important part of many people's healing process.`,
+  },
+  {
+    term: 'Neurodivergent / Neurotypical',
+    anchor: 'neurodivergent',
+    definition: `"Neurodivergent" describes people whose brains develop or function differently from what's considered typical — including autistic people, ADHDers, dyslexic people, and many others. "Neurotypical" describes people whose neurological development follows the statistically common pattern. Both terms come from the neurodiversity movement, which frames these differences as natural human variation rather than deficits. The terms were coined and popularized by autistic advocates in the 1990s.`,
+  },
+  {
+    term: 'Rejection Sensitive Dysphoria (RSD)',
+    anchor: 'rsd',
+    definition: `An intense emotional response to perceived or actual rejection, criticism, or failure — often experienced as a sudden, overwhelming wave of pain, shame, or rage. RSD is strongly associated with ADHD and is thought to result from emotional dysregulation in ADHD brains. The key word is "dysphoria" — this isn't ordinary hurt feelings; it can feel physically painful and completely disproportionate to the trigger. Many people with ADHD describe RSD as one of the most disabling aspects of the condition, yet it's rarely discussed in diagnostic criteria.`,
+  },
+  {
+    term: 'Sensory Processing Differences',
+    anchor: 'sensory',
+    definition: `Differences in how the brain registers and responds to sensory input — touch, sound, light, smell, taste, movement, and internal body signals (interoception). Someone who is sensory-sensitive (hypersensitive) may find certain sounds, textures, or lights painful or overwhelming. Someone who is sensory-seeking (hyposensitive) may seek out strong sensory input to feel regulated. Most neurodivergent people have a mix of both. Sensory processing differences are a core feature of autism but also common in ADHD, dyspraxia, and other conditions. They're real, they're neurological, and they're not being dramatic.`,
+  },
+  {
+    term: 'Stimming',
+    anchor: 'stimming',
+    definition: `Short for "self-stimulatory behavior" — repetitive movements, sounds, or actions that help regulate the nervous system. Examples: rocking, hand-flapping, hair-twirling, humming, clicking a pen, chewing things, spinning, or repeating words or sounds. Stimming is common in autistic people and ADHDers and serves real purposes: emotional regulation, sensory processing, reducing anxiety, and expressing excitement or distress. There is nothing wrong with stimming as long as it doesn't cause harm. The pressure to suppress stims (often enforced in ABA therapy) is harmful and is increasingly recognized as such.`,
+  },
+  {
+    term: 'Time Blindness',
+    anchor: 'time-blindness',
+    definition: `The difficulty perceiving time passing, estimating how long tasks will take, and planning around future events. Associated with ADHD (and described extensively by Dr. Russell Barkley), time blindness isn't a metaphor — for many people with ADHD, time genuinely feels like it only has two states: "now" and "not now." This makes it very difficult to prepare for future events, transition out of current activities, or arrive anywhere on time — not because of disrespect or laziness, but because the internal clock doesn't tick the same way. Visual timers and external cues help.`,
+  },
+  {
+    term: 'Twice Exceptional (2e)',
+    anchor: '2e',
+    definition: `A term for people who are both intellectually gifted and have a learning difference, disability, or neurodevelopmental condition — like a gifted student who is also dyslexic, or a high-IQ autistic person. "Twice exceptional" people often get lost in the cracks: their intelligence masks their struggles (so they don't get support), and their struggles mask their gifts (so they don't get challenged). 2e people can fly through some areas while hitting walls in others, and they often aren't identified until late because their strengths hide the difficulties.`,
+  },
+];
+---
+
+<PageLayout
+  title="Glossary — Peculiar Peach"
+  description="Plain-language definitions for neurodivergent terms — ADHD, autism, AuDHD, masking, stimming, RSD, and more."
+>
+  <Hero layout="centered" size="sm" class="isolate" showHeroHalo>
+    <Badge slot="badge" variant="brand" pill>
+      <Icon name="search" size="sm" />
+      Glossary
+    </Badge>
+    <h1 slot="title">The words, explained</h1>
+    <p slot="description">
+      Plain-language definitions for the terms that keep showing up — no medical degree required. This glossary grows over time.
+    </p>
+  </Hero>
+
+  <!-- Disclaimer -->
+  <section class="py-8 bg-background border-t border-border">
+    <div class="mx-auto max-w-4xl px-6">
+      <Card padding="lg" class="bg-brand-500/5 border-brand-500/20">
+        <p class="text-sm text-foreground-muted text-balance">
+          <strong class="text-foreground">A note:</strong> These definitions are written to be accessible and human, not clinical. They reflect current understanding and community usage — not a diagnostic manual. Language in the neurodivergent community evolves, and community preferences vary. If you see something that should be updated or added, <a href="/contact" class="text-brand-500 hover:text-brand-600 font-medium">let us know</a>.
+        </p>
+      </Card>
+    </div>
+  </section>
+
+  <!-- Jump links -->
+  <section class="py-6 bg-background-secondary border-t border-border sticky top-16 z-10">
+    <div class="mx-auto max-w-4xl px-6">
+      <div class="flex flex-wrap gap-2">
+        {terms.map((t) => (
+          <a
+            href={`#${t.anchor}`}
+            class="text-xs font-medium px-3 py-1.5 rounded-full bg-background border border-border text-foreground-muted hover:text-foreground hover:border-brand-500 transition-colors"
+          >
+            {t.term}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Terms -->
+  <section class="py-[var(--space-section-md)] bg-background border-t border-border">
+    <div class="mx-auto max-w-4xl px-6 flex flex-col gap-8">
+      {terms.map((t, i) => (
+        <div id={t.anchor} class="scroll-mt-32" data-reveal>
+          <Card variant="elevated" padding="lg">
+            <div class="flex flex-col gap-3">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0 mt-0.5">
+                  <span class="text-xs font-bold">{String(i + 1).padStart(2, '0')}</span>
+                </div>
+                <h2 class="font-display text-xl font-bold text-foreground">{t.term}</h2>
+              </div>
+              <p class="text-foreground-muted leading-relaxed text-pretty pl-11">
+                {t.definition}
+              </p>
+            </div>
+          </Card>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
+    <div class="mx-auto max-w-2xl px-6 text-center" data-reveal>
+      <Badge variant="brand" pill class="mb-6">Missing something?</Badge>
+      <h2 class="font-display text-3xl font-bold text-foreground mb-4 text-balance">
+        This list is always growing
+      </h2>
+      <p class="text-lg text-foreground-muted mb-8 text-balance">
+        If there's a term you'd like to see defined here — or something we got wrong — tell us.
+      </p>
+      <Button size="lg" href="/contact">
+        Suggest a term
+        <Icon name="arrow-right" size="sm" />
+      </Button>
+    </div>
+  </section>
+</PageLayout>

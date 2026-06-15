@@ -26,20 +26,21 @@ export interface LegalLink {
 }
 
 export const navItems: NavItem[] = [
-  { label: 'Services', href: '/services', order: 1 },
-  { label: 'Projects', href: '/projects', order: 2 },
-  { label: 'Blog', href: '/blog', order: 3 },
-  { label: 'About', href: '/about', order: 4 },
-  { label: 'Contact', href: '/contact', order: 5 },
+  { label: 'Resources', href: '/resources', order: 1 },
+  { label: 'Glossary', href: '/glossary', order: 2 },
+  { label: 'Articles', href: '/blog', order: 3 },
+  { label: 'Shop', href: '/shop', order: 4 },
+  { label: 'About', href: '/about', order: 5 },
   { label: 'Search', href: '/search', order: 6 },
 ];
 
 export const footerNavItems: NavItem[] = [
-  { label: 'Services', href: '/services', order: 1 },
-  { label: 'Projects', href: '/projects', order: 2 },
-  { label: 'Blog', href: '/blog', order: 3 },
-  { label: 'About', href: '/about', order: 4 },
-  { label: 'Contact', href: '/contact', order: 5 },
+  { label: 'Resources', href: '/resources', order: 1 },
+  { label: 'Glossary', href: '/glossary', order: 2 },
+  { label: 'Articles', href: '/blog', order: 3 },
+  { label: 'Shop', href: '/shop', order: 4 },
+  { label: 'About', href: '/about', order: 5 },
+  { label: 'Contact', href: '/contact', order: 6 },
 ];
 
 export const legalLinks: LegalLink[] = [];

@@ -1,0 +1,361 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import Icon from '@/components/ui/primitives/Icon/Icon.astro';
+import Badge from '@/components/ui/data-display/Badge/Badge.astro';
+import Card from '@/components/ui/data-display/Card/Card.astro';
+import Button from '@/components/ui/form/Button/Button.astro';
+import { Hero } from '@/components/hero';
+---
+
+<PageLayout
+  title="Resources — Peculiar Peach"
+  description="Curated resources for neurodivergent people — tools, guides, self-understanding, and crisis support."
+>
+  <Hero layout="centered" size="sm" class="isolate" showHeroHalo>
+    <Badge slot="badge" variant="brand" pill>
+      <Icon name="book-open" size="sm" />
+      Resources
+    </Badge>
+    <h1 slot="title">Stuff that actually helps</h1>
+    <p slot="description">
+      Curated for ADHD, autistic, AuDHD, and neurodivergent brains. Organized so you can find things even when your brain is doing that thing it does.
+    </p>
+  </Hero>
+
+  <!-- Understanding Yourself -->
+  <section id="understanding" class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
+    <div class="mx-auto max-w-6xl px-6 flex flex-col gap-8">
+      <div class="flex flex-col gap-4" data-reveal>
+        <Badge variant="brand" pill class="self-start">
+          <Icon name="brain" size="sm" />
+          Understanding Yourself
+        </Badge>
+        <h2 class="font-display text-3xl font-bold text-foreground">
+          Making sense of your brain
+        </h2>
+        <p class="text-lg text-foreground-muted max-w-2xl text-pretty">
+          Getting a diagnosis — or figuring out you're neurodivergent without one — can feel like finally getting the instruction manual for yourself. These resources help.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Card hover padding="lg" data-reveal>
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="file-text" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">CHADD (ADHD)</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              The leading nonprofit for ADHD information, run by professionals and people with ADHD. Solid research-backed content without the doom-scrolling energy.
+            </p>
+            <a href="https://chadd.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Visit CHADD <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="1">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="heart" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">Autism Self Advocacy Network</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Run by autistic people, for autistic people. ASAN operates on a "nothing about us without us" principle. The gold standard for autistic-led advocacy.
+            </p>
+            <a href="https://autisticadvocacy.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Visit ASAN <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="2">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="search" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">Our Glossary</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Not sure what AuDHD, RSD, or masking actually mean? We've got plain-language definitions for the terms that keep showing up.
+            </p>
+            <a href="/glossary" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Browse the glossary <Icon name="arrow-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="3">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="book-open" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">ADDitude Magazine</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              One of the most comprehensive ADHD resources online — covers adults, kids, relationships, work, and comorbidities. Heavy on practical, real-world advice.
+            </p>
+            <a href="https://additudemag.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Visit ADDitude <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="4">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="users" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">r/ADHD & r/autism</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Sometimes you just need to hear "oh my god, me too." Both communities are large, generally supportive, and full of people sharing what actually works for them.
+            </p>
+            <a href="https://reddit.com/r/ADHD" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              r/ADHD <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="5">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="sparkles" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">Embrace Autism</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Research-backed autism information with a positive, identity-affirming approach. Also has one of the more thorough collections of self-assessment tools available online.
+            </p>
+            <a href="https://embrace-autism.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Visit Embrace Autism <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools & Strategies -->
+  <section id="tools" class="py-[var(--space-section-md)] bg-background border-t border-border">
+    <div class="mx-auto max-w-6xl px-6 flex flex-col gap-8">
+      <div class="flex flex-col gap-4" data-reveal>
+        <Badge variant="brand" pill class="self-start">
+          <Icon name="zap" size="sm" />
+          Tools & Strategies
+        </Badge>
+        <h2 class="font-display text-3xl font-bold text-foreground">
+          Things that help your brain work
+        </h2>
+        <p class="text-lg text-foreground-muted max-w-2xl text-pretty">
+          Not every tool works for every brain. But these have strong track records with neurodivergent folks. Try them, skip what doesn't fit.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Card hover padding="lg" data-reveal>
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="clock" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">Time Timer</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              A visual timer that shows time passing as a shrinking red disc. Sounds simple. It is. Also genuinely life-changing for time-blind brains. Available as an app and a physical device.
+            </p>
+            <a href="https://timetimer.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Time Timer <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="1">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="layout" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">Notion</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Infinitely flexible — which is either a dream or a nightmare depending on your brain. Best used with a simple template. Good for body-doubling with yourself via to-do pages.
+            </p>
+            <a href="https://notion.so" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Notion <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="2">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="headphones" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">Brain.fm</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              AI-generated music designed specifically for focus. Different from lo-fi playlists — it uses functional neuroscience to keep your brain in the zone. Many ADHD folks swear by it.
+            </p>
+            <a href="https://brain.fm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Brain.fm <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="3">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="users" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">Focusmate</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Virtual body-doubling. You schedule a 25- or 50-minute session, get matched with a stranger, turn your cameras on, and work silently together. Wildly effective for ADHD brains.
+            </p>
+            <a href="https://focusmate.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Focusmate <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="4">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="pen-line" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">Goblin Tools</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              A free AI-powered toolkit built for neurodivergent people. Breaks tasks into tiny steps, judges tone in messages, and more. The Magic To-Do is genuinely excellent.
+            </p>
+            <a href="https://goblin.tools" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Goblin Tools <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="5">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="moon" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">Routinery</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              A routine-building app that breaks habits into timed steps and guides you through them. Especially helpful for morning and bedtime routines — the transitions that are hardest for ND brains.
+            </p>
+            <a href="https://routinery.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Routinery <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Crisis Resources -->
+  <section id="crisis" class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
+    <div class="mx-auto max-w-6xl px-6 flex flex-col gap-8">
+      <div class="flex flex-col gap-4" data-reveal>
+        <Badge variant="brand" pill class="self-start">
+          <Icon name="heart" size="sm" />
+          Crisis Resources
+        </Badge>
+        <h2 class="font-display text-3xl font-bold text-foreground">
+          If you're struggling right now
+        </h2>
+        <p class="text-lg text-foreground-muted max-w-2xl text-pretty">
+          Neurodivergent people experience mental health crises at higher rates. If you're in a hard moment, please reach out. These are real people, not bots.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        <Card variant="elevated" padding="lg" data-reveal>
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+                <Icon name="phone" size="sm" />
+              </div>
+              <h3 class="font-semibold text-foreground">988 Suicide & Crisis Lifeline</h3>
+            </div>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Call or text <strong class="text-foreground">988</strong> from anywhere in the US. Available 24/7. You don't have to be suicidal to call — if you're in crisis, that's enough.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-1">
+              <a href="tel:988" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600">
+                Call 988 <Icon name="phone" size="sm" />
+              </a>
+              <span class="text-foreground-muted">·</span>
+              <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600">
+                Chat online <Icon name="arrow-up-right" size="sm" />
+              </a>
+            </div>
+          </div>
+        </Card>
+
+        <Card variant="elevated" padding="lg" data-reveal data-reveal-delay="1">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+                <Icon name="message-circle" size="sm" />
+              </div>
+              <h3 class="font-semibold text-foreground">Crisis Text Line</h3>
+            </div>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Text <strong class="text-foreground">HOME to 741741</strong>. Free, confidential, 24/7. Great if calling feels too hard or overwhelming — texting is a completely valid option.
+            </p>
+            <a href="https://crisistextline.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Crisis Text Line <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card variant="elevated" padding="lg" data-reveal data-reveal-delay="2">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+                <Icon name="users" size="sm" />
+              </div>
+              <h3 class="font-semibold text-foreground">NAMI Helpline</h3>
+            </div>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              The National Alliance on Mental Illness helpline: <strong class="text-foreground">1-800-950-6264</strong>. Monday–Friday, 10am–10pm ET. Also has a text option (text NAMI to 741741).
+            </p>
+            <a href="https://nami.org/help" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              NAMI Helpline <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+
+        <Card variant="elevated" padding="lg" data-reveal data-reveal-delay="3">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+                <Icon name="globe" size="sm" />
+              </div>
+              <h3 class="font-semibold text-foreground">International Association for Suicide Prevention</h3>
+            </div>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Outside the US? IASP maintains a directory of crisis centers around the world. Find the resource that's right for your country.
+            </p>
+            <a href="https://www.iasp.info/resources/Crisis_Centres/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 mt-1">
+              Find a crisis center <Icon name="arrow-up-right" size="sm" />
+            </a>
+          </div>
+        </Card>
+      </div>
+
+      <Card padding="lg" class="bg-brand-500/5 border-brand-500/20 mt-2" data-reveal>
+        <p class="text-sm text-foreground-muted leading-relaxed text-balance text-center">
+          <strong class="text-foreground">Not a crisis, but not okay either?</strong> That's still valid. Consider reaching out to a therapist who specializes in neurodivergent clients — Psychology Today's therapist finder lets you filter by specialty. <a href="https://www.psychologytoday.com/us/therapists" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 font-medium">Find a therapist →</a>
+        </p>
+      </Card>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-[var(--space-section-md)] bg-background border-t border-border">
+    <div class="mx-auto max-w-2xl px-6 text-center" data-reveal>
+      <Badge variant="brand" pill class="mb-6">Know something we missed?</Badge>
+      <h2 class="font-display text-3xl font-bold text-foreground mb-4 text-balance">
+        Help us make this better
+      </h2>
+      <p class="text-lg text-foreground-muted mb-8 text-balance">
+        This list is a living thing. If there's a resource that's made a real difference for you, send it our way.
+      </p>
+      <Button size="lg" href="/contact">
+        Suggest a resource
+        <Icon name="arrow-right" size="sm" />
+      </Button>
+    </div>
+  </section>
+</PageLayout>

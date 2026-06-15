@@ -1,0 +1,82 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import Icon from '@/components/ui/primitives/Icon/Icon.astro';
+import Badge from '@/components/ui/data-display/Badge/Badge.astro';
+import Card from '@/components/ui/data-display/Card/Card.astro';
+import Button from '@/components/ui/form/Button/Button.astro';
+import { Hero } from '@/components/hero';
+---
+
+<PageLayout
+  title="Shop — Peculiar Peach"
+  description="Merch for neurodivergent people. Wear your brain on your sleeve — literally."
+>
+  <Hero layout="centered" size="sm" class="isolate" showHeroHalo>
+    <Badge slot="badge" variant="brand" pill>
+      <Icon name="shopping-bag" size="sm" />
+      Shop
+    </Badge>
+    <h1 slot="title">Merch for your kind of brain</h1>
+    <p slot="description">
+      Apparel, accessories, and gear that says the quiet part loud. For ADHD, autistic, AuDHD, and neurodivergent people who are done pretending to be otherwise.
+    </p>
+    <Fragment slot="actions">
+      <Button size="lg" href="https://peculiarpeach.printful.me" target="_blank" rel="noopener noreferrer">
+        Browse the shop
+        <Icon name="arrow-up-right" size="sm" />
+      </Button>
+    </Fragment>
+  </Hero>
+
+  <!-- Shop section -->
+  <section class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
+    <div class="mx-auto max-w-4xl px-6 flex flex-col gap-10">
+
+      <div class="grid gap-6 sm:grid-cols-3" data-reveal>
+        <Card hover padding="lg" class="flex flex-col items-center text-center gap-3">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+            <Icon name="shirt" size="md" />
+          </div>
+          <h3 class="font-semibold text-foreground">Apparel</h3>
+          <p class="text-sm text-foreground-muted leading-relaxed">T-shirts, hoodies, and more — with designs that speak the language.</p>
+        </Card>
+        <Card hover padding="lg" class="flex flex-col items-center text-center gap-3" data-reveal-delay="1">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+            <Icon name="coffee" size="md" />
+          </div>
+          <h3 class="font-semibold text-foreground">Accessories</h3>
+          <p class="text-sm text-foreground-muted leading-relaxed">Mugs, totes, stickers, and things to fidget with between meetings.</p>
+        </Card>
+        <Card hover padding="lg" class="flex flex-col items-center text-center gap-3" data-reveal-delay="2">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+            <Icon name="sparkles" size="md" />
+          </div>
+          <h3 class="font-semibold text-foreground">New Designs</h3>
+          <p class="text-sm text-foreground-muted leading-relaxed">We add new stuff regularly. Check back — or better yet, subscribe so you don't forget.</p>
+        </Card>
+      </div>
+
+      <div class="flex flex-col items-center gap-6 text-center" data-reveal>
+        <p class="text-lg text-foreground-muted max-w-xl text-balance">
+          All products are printed on demand through Printful. No warehouse of unsold hoodies — just your order, made when you place it.
+        </p>
+        <Button size="lg" href="https://peculiarpeach.printful.me" target="_blank" rel="noopener noreferrer">
+          Go to the shop
+          <Icon name="arrow-up-right" size="sm" />
+        </Button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Note -->
+  <section class="py-[var(--space-section-md)] bg-background border-t border-border">
+    <div class="mx-auto max-w-2xl px-6 text-center" data-reveal>
+      <Card padding="lg" class="bg-brand-500/5 border-brand-500/20">
+        <p class="text-sm text-foreground-muted text-balance">
+          <strong class="text-foreground">Want to see something specific?</strong> Have an idea for a design, a phrase that needs to be on a shirt, or a product we're not carrying? <a href="/contact" class="text-brand-500 hover:text-brand-600 font-medium">Tell us →</a>
+        </p>
+      </Card>
+    </div>
+  </section>
+</PageLayout>

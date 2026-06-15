@@ -1,238 +1,211 @@
 ---
-/**
- * About page
- * URL: /about
- */
 import PageLayout from '@/layouts/PageLayout.astro';
 import Icon from '@/components/ui/primitives/Icon/Icon.astro';
 import Badge from '@/components/ui/data-display/Badge/Badge.astro';
 import Card from '@/components/ui/data-display/Card/Card.astro';
 import Button from '@/components/ui/form/Button/Button.astro';
 import { Hero } from '@/components/hero';
-import TypingEffect from '@/components/ui/TypingEffect.astro';
-import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
 ---
+
 <PageLayout
-  title="About Brad Thomas — Information Architect & UX Principal"
-  description="Visual storyteller with 20+ years of design experience. Information Architect & UX Principal at EPRI. Writing about design and AI at bradthomas.io."
+  title="About — Peculiar Peach"
+  description="What Peculiar Peach is, what it isn't, and why it exists."
+  includeOrgSchema={true}
 >
   <Hero layout="centered" size="sm" class="isolate" showHeroHalo>
     <Badge slot="badge" variant="brand" pill>
-      <Icon name="user" size="sm" />
+      <Icon name="heart" size="sm" />
       About
     </Badge>
-    <h1 slot="title">
-      <span class="text-foreground [-webkit-text-fill-color:currentColor]">Brad Thomas</span><br />
-      <span class="text-brand-500 [-webkit-text-fill-color:var(--color-brand-500)]">
-        <TypingEffect words={["Information Architect", "UX Principal", "Visual Storyteller", "Design & AI Writer"]} />
-      </span>
-    </h1>
-
+    <h1 slot="title">What is Peculiar Peach?</h1>
     <p slot="description">
-      20+ years of design experience. Translating complexity into clarity across enterprise products, mobile applications, and digital ecosystems.
+      A space for neurodivergent people. Not a clinic, not a support group, not a place that's going to tell you you're broken.
     </p>
   </Hero>
 
-  <!-- Bio -->
+  <!-- Mission -->
   <section class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="grid gap-10 glitch:grid-cols-2 glitch:gap-12">
-        <div class="flex flex-col justify-center gap-4 sm:items-center sm:text-center glitch:items-start glitch:text-left" data-reveal="right" data-reveal-ease="smooth">
-          <div class="flex flex-col gap-6 sm:items-center glitch:items-start">
-            <Badge variant="brand" pill class="self-start sm:self-center glitch:self-start">Background</Badge>
-            <h2 class="font-display text-3xl md:text-4xl font-bold text-foreground text-balance">
-              Designing with purpose for two decades
-            </h2>
-          </div>
-          <p class="text-lg text-foreground-muted leading-relaxed text-pretty sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0">
-            I'm a visual storyteller with 20+ years of design experience spanning print, identity, web, and digital experience design. My work has taken me from newspaper front pages to enterprise design systems to AI-native interfaces.
+    <div class="mx-auto max-w-4xl px-6 flex flex-col gap-10">
+
+      <div class="grid gap-10 glitch:grid-cols-2 glitch:gap-12 glitch:items-start">
+        <div class="flex flex-col gap-6" data-reveal="right" data-reveal-ease="smooth">
+          <Badge variant="brand" pill class="self-start">Why we exist</Badge>
+          <h2 class="font-display text-3xl font-bold text-foreground">
+            Peculiar is not an insult.<br />
+            <span class="text-brand-400">We reclaimed it.</span>
+          </h2>
+          <p class="text-lg text-foreground-muted leading-relaxed text-pretty">
+            A lot of us were called "peculiar" — or weird, difficult, too much, not enough — before anyone figured out our brains just work differently. Peculiar Peach takes that word back.
           </p>
-          <p class="text-lg text-foreground-muted leading-relaxed text-pretty sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0">
-            Currently I serve as Information Architect & UX Principal at EPRI, where I lead UX and UI design across web and mobile applications, build design systems in Figma, and champion accessibility standards across digital products.
+          <p class="text-lg text-foreground-muted leading-relaxed text-pretty">
+            This site exists because neurodivergent people deserve resources that don't condescend, communities that don't require masking, and a place where "I do that too" is the most common response.
           </p>
-          <p class="text-lg text-foreground-muted leading-relaxed text-pretty sm:max-w-xl sm:mx-auto glitch:max-w-none glitch:mx-0">
-            Outside of work, I write about design, AI, and the future of creative work at <a href="https://bradthomas.io" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 decoration-brand-500 hover:text-brand-400 transition-colors">bradthomas.io</a> — exploring how designers can thrive as AI becomes integrated into the creative process.
+          <p class="text-lg text-foreground-muted leading-relaxed text-pretty">
+            We're not a medical practice. We're not going to diagnose you. We're a corner of the internet that gets it.
           </p>
         </div>
 
-        <div class="flex flex-col h-full" data-reveal="left" data-reveal-delay="1" data-reveal-ease="smooth">
-          <Card variant="elevated" padding="lg" class="flex-1 flex flex-col justify-center gap-6">
-            <div class="flex flex-col gap-2">
-              <h3 class="text-sm font-semibold text-foreground-muted uppercase tracking-wider">Current Role</h3>
-              <p class="text-base font-semibold text-foreground">Information Architect & UX Principal</p>
-              <p class="text-sm text-foreground-muted">EPRI · Jul 2022 – Present</p>
+        <div class="flex flex-col gap-4" data-reveal="left" data-reveal-delay="1" data-reveal-ease="smooth">
+          <Card variant="elevated" padding="lg">
+            <div class="flex flex-col gap-4">
+              <h3 class="font-display text-lg font-bold text-foreground">What we are</h3>
+              <ul class="flex flex-col gap-3">
+                <li class="flex items-start gap-3">
+                  <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
+                  <p class="text-sm text-foreground-muted leading-relaxed">A curated resource hub for ADHD, autistic, AuDHD, dyslexic, and neurodivergent people</p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
+                  <p class="text-sm text-foreground-muted leading-relaxed">An honest, irreverent space that doesn't talk down to you or pathologize your existence</p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
+                  <p class="text-sm text-foreground-muted leading-relaxed">A glossary of terms explained in plain language, not DSM-speak</p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
+                  <p class="text-sm text-foreground-muted leading-relaxed">A place for articles about the actual experience of living in a neurodivergent brain</p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <Icon name="check" size="sm" class="text-brand-500 shrink-0 mt-1" />
+                  <p class="text-sm text-foreground-muted leading-relaxed">A shop full of merch that says the quiet part loud</p>
+                </li>
+              </ul>
             </div>
-            <div class="border-t border-border"></div>
-            <div class="flex flex-col gap-2">
-              <h3 class="text-sm font-semibold text-foreground-muted uppercase tracking-wider">Location</h3>
-              <p class="text-base text-foreground">Staunton, VA</p>
-            </div>
-            <div class="border-t border-border"></div>
-            <div class="flex flex-col gap-2">
-              <h3 class="text-sm font-semibold text-foreground-muted uppercase tracking-wider">Education</h3>
-              <p class="text-base text-foreground">University of North Carolina at Charlotte</p>
-              <p class="text-sm text-foreground-muted">1994 – 1998</p>
-            </div>
-            <div class="border-t border-border"></div>
-            <div class="flex flex-col gap-3">
-              <h3 class="text-sm font-semibold text-foreground-muted uppercase tracking-wider">Links</h3>
-              <a href="https://linkedin.com/in/bradthomasnc" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-foreground hover:text-brand-500 transition-colors">
-                <Icon name="linkedin" size="sm" />
-                linkedin.com/in/bradthomasnc
-              </a>
-              <a href="https://bradthomas.io" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-foreground hover:text-brand-500 transition-colors">
-                <Icon name="pen-line" size="sm" />
-                bradthomas.io
-              </a>
-              <a href="https://bradthomasdesign.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-foreground hover:text-brand-500 transition-colors">
-                <Icon name="globe" size="sm" />
-                bradthomasdesign.com
-              </a>
+          </Card>
+
+          <Card variant="elevated" padding="lg">
+            <div class="flex flex-col gap-4">
+              <h3 class="font-display text-lg font-bold text-foreground">What we're not</h3>
+              <ul class="flex flex-col gap-3">
+                <li class="flex items-start gap-3">
+                  <Icon name="x" size="sm" class="text-foreground-muted shrink-0 mt-1" />
+                  <p class="text-sm text-foreground-muted leading-relaxed">A medical practice — we can't diagnose, prescribe, or replace your clinician</p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <Icon name="x" size="sm" class="text-foreground-muted shrink-0 mt-1" />
+                  <p class="text-sm text-foreground-muted leading-relaxed">A crisis line — if you're in crisis, please use <a href="/resources#crisis" class="text-brand-500 hover:text-brand-600 font-medium">these resources</a></p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <Icon name="x" size="sm" class="text-foreground-muted shrink-0 mt-1" />
+                  <p class="text-sm text-foreground-muted leading-relaxed">A place that thinks neurodivergence needs to be fixed, cured, or managed into invisibility</p>
+                </li>
+              </ul>
             </div>
           </Card>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Experience -->
+  <!-- Values -->
   <section class="py-[var(--space-section-md)] bg-background border-t border-border">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="mb-8 text-center flex flex-col items-center gap-4" data-reveal>
-        <div class="flex flex-col items-center gap-6">
-          <Badge variant="brand" pill>Experience</Badge>
-          <h2 class="font-display text-4xl font-bold text-foreground">
-            Where I've worked
-          </h2>
-        </div>
-        <p class="text-lg text-foreground-muted max-w-2xl mx-auto text-balance">
-          Two decades of design across enterprise, fintech, media, and startup environments.
+    <div class="mx-auto max-w-6xl px-6 flex flex-col gap-8">
+      <div class="flex flex-col items-center gap-4 text-center" data-reveal>
+        <Badge variant="brand" pill>How we do things</Badge>
+        <h2 class="font-display text-3xl font-bold text-foreground">Our operating principles</h2>
+        <p class="text-lg text-foreground-muted max-w-2xl text-balance">
+          Nothing fancy. Just the things we think matter.
         </p>
       </div>
-      <div class="grid gap-6 md:grid-cols-2">
-        <Card hover data-reveal>
-          <div class="flex items-start gap-4">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-              <Icon name="building-2" size="md" />
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Card hover padding="lg" data-reveal>
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="users" size="sm" />
             </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-foreground">Information Architect & UX Principal</h3>
-              <p class="text-sm text-brand-500 font-medium mt-0.5">EPRI · 2016 – Present</p>
-              <p class="text-sm text-foreground-muted leading-relaxed mt-2">
-                Leading UX and UI design across web and mobile applications. Built enterprise-wide Figma design system, established visual web standards, and championed ADA compliance.
-              </p>
-            </div>
+            <h3 class="font-semibold text-foreground">Nothing about us without us</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Content about neurodivergent people should be written with neurodivergent people in mind — not for concerned parents or skeptical employers.
+            </p>
           </div>
         </Card>
-        <Card hover data-reveal data-reveal-delay="1">
-          <div class="flex items-start gap-4">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-              <Icon name="building-2" size="md" />
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="1">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="zap" size="sm" />
             </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-foreground">Sr. UX Architect – AVP</h3>
-              <p class="text-sm text-brand-500 font-medium mt-0.5">U.S. Bank · 2022</p>
-              <p class="text-sm text-foreground-muted leading-relaxed mt-2">
-                Applied human-centered design methodologies — personas, user flows, wireframes, and interactive prototypes — to deliver accessible, world-class customer experiences.
-              </p>
-            </div>
+            <h3 class="font-semibold text-foreground">Short, direct, no fluff</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              We write for brains that don't have time for five paragraphs before the actual point. If it can be said in fewer words, it will be.
+            </p>
           </div>
         </Card>
-        <Card hover data-reveal data-reveal-delay="2">
-          <div class="flex items-start gap-4">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-              <Icon name="building-2" size="md" />
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="2">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="heart" size="sm" />
             </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-foreground">Sr. UX Designer / Lead Visual Designer</h3>
-              <p class="text-sm text-brand-500 font-medium mt-0.5">LPL Financial · 2014–2015</p>
-              <p class="text-sm text-foreground-muted leading-relaxed mt-2">
-                Designed a visual system for diverse audiences and built a customizable reporting suite, setting a high standard for design excellence across all online products.
-              </p>
-            </div>
+            <h3 class="font-semibold text-foreground">Identity-affirming</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              We follow the community's lead on language. We default to identity-first language ("autistic person") while respecting individual preferences.
+            </p>
           </div>
         </Card>
-        <Card hover data-reveal data-reveal-delay="3">
-          <div class="flex items-start gap-4">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-              <Icon name="building-2" size="md" />
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="3">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="sparkles" size="sm" />
             </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-foreground">Designer / Developer</h3>
-              <p class="text-sm text-brand-500 font-medium mt-0.5">LendingTree · 2010–2011</p>
-              <p class="text-sm text-foreground-muted leading-relaxed mt-2">
-                Designed and built products for LendingTree.com including the "Canopy" client-facing interface and Loan Explorer — with visual integration into Yahoo and AOL.
-              </p>
+            <h3 class="font-semibold text-foreground">Honest about what we don't know</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              We're not experts. We'll say so. We'll point you to people who are. We update content when we get things wrong.
+            </p>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="4">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="smile" size="sm" />
             </div>
+            <h3 class="font-semibold text-foreground">Irreverence is a feature</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              The clinical world takes itself very seriously. We don't, always. Humor is a coping mechanism, a communication style, and honestly just more fun.
+            </p>
+          </div>
+        </Card>
+
+        <Card hover padding="lg" data-reveal data-reveal-delay="5">
+          <div class="flex flex-col gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
+              <Icon name="book-open" size="sm" />
+            </div>
+            <h3 class="font-semibold text-foreground">Always learning</h3>
+            <p class="text-sm text-foreground-muted leading-relaxed">
+              Research evolves. Language evolves. Community understanding evolves. We try to keep up.
+            </p>
           </div>
         </Card>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- Contact CTA -->
   <section class="py-[var(--space-section-md)] bg-background-secondary border-t border-border">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="mb-8 text-center flex flex-col items-center gap-4" data-reveal>
-        <div class="flex flex-col items-center gap-6">
-          <Badge variant="brand" pill>Skills</Badge>
-          <h2 class="font-display text-3xl md:text-4xl font-bold text-foreground">
-            What I bring to the table
-          </h2>
-        </div>
-      </div>
-      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-        {[
-          { icon: 'layout', title: 'UX & Information Architecture', desc: 'User flows, wireframes, IA, research, and experience strategy.' },
-          { icon: 'pen-tool', title: 'UI & Visual Design', desc: 'Design systems, component libraries, and polished visual execution in Figma.' },
-          { icon: 'smartphone', title: 'Mobile Design', desc: 'Mobile-first UX with a focus on usability, accessibility, and platform conventions.' },
-          { icon: 'brain', title: 'AI-Native Design', desc: 'Designing for generative AI interfaces and AI-powered UX workflows.' },
-          { icon: 'accessibility', title: 'Accessibility', desc: 'ADA compliance, inclusive design, and WCAG standards across digital products.' },
-          { icon: 'layers', title: 'Design Systems', desc: 'Enterprise-scale Figma libraries, visual standards, and design governance.' },
-        ].map((skill, i) => (
-          <Card hover data-reveal data-reveal-delay={String(i % 3)}>
-            <div class="flex items-start gap-4 sm:flex-col sm:items-center sm:gap-3 sm:text-center lg:flex-row lg:items-start lg:gap-4 lg:text-left">
-              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-                <Icon name={skill.icon} size="md" />
-              </div>
-              <div class="flex-1 min-w-0">
-                <h3 class="text-base font-semibold text-foreground">{skill.title}</h3>
-                <p class="text-sm text-foreground-muted leading-relaxed mt-1.5">{skill.desc}</p>
-              </div>
-            </div>
-          </Card>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="relative z-10 py-[var(--space-section-md)] bg-background border-t border-border">
-    <div class="glitch:hidden mx-auto max-w-2xl px-6 text-center" data-reveal>
+    <div class="mx-auto max-w-2xl px-6 text-center" data-reveal>
       <Badge variant="brand" pill class="mb-6">Get in touch</Badge>
-      <h2 class="font-display text-4xl font-bold text-foreground mb-4 text-balance">
-        Let's work together
+      <h2 class="font-display text-3xl font-bold text-foreground mb-4 text-balance">
+        Have something to say?
       </h2>
       <p class="text-lg text-foreground-muted mb-8 text-balance">
-        Have a project in mind? I'd love to hear about it.
+        Suggestions, corrections, resource ideas, design requests, or just want to say hi — we read everything.
       </p>
-      <Button size="lg" href="/contact" class="cta-btn-brand">
-        Contact me
-        <Icon name="arrow-right" size="sm" />
-      </Button>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button size="lg" href="/contact">
+          Contact us
+          <Icon name="arrow-right" size="sm" />
+        </Button>
+        <Button size="lg" variant="outline" href="https://peculiarpeach.substack.com" target="_blank" rel="noopener noreferrer">
+          Subscribe on Substack
+          <Icon name="arrow-up-right" size="sm" />
+        </Button>
+      </div>
     </div>
-
-    <LetterGlitchBand>
-      <h2 class="font-display text-4xl font-bold text-foreground mb-4 text-balance">
-        Let's work together
-      </h2>
-      <p class="text-lg text-foreground-muted mb-8 text-balance">
-        Have a project in mind? I'd love to hear about it.
-      </p>
-      <Button size="lg" href="/contact" class="hero-btn-brand">
-        Contact me
-        <Icon name="arrow-right" size="sm" />
-      </Button>
-    </LetterGlitchBand>
   </section>
 </PageLayout>
