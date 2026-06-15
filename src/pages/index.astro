@@ -9,7 +9,7 @@ import BlogCard from '@/components/blog/BlogCard.astro';
 import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
+const posts = (await getCollection('blog', ({ data }) => !data.draft).catch(() => []))
   .sort((a, b) => {
     if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
     return b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf();
