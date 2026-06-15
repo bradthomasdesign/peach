@@ -69,7 +69,8 @@ const classes = cn(
     background-color: var(--color-brand-700);
   }
   html:not(.dark) .btn-primary:hover {
-    background-color: var(--color-brand-800);
+    background-color: var(--color-brand-800, var(--color-brand-700));
+    color: white;
   }
 
   /*
